@@ -277,6 +277,27 @@ typedef struct {
 } block_tq2_0;
 static_assert(sizeof(block_tq2_0) == sizeof(ggml_half) + QK_K / 4, "wrong tq2_0 block size/padding");
 
+// ============================================================================
+// TurboQuant-Hybrid: Hybrid KV Cache Quantization with Outlier Preservation
+// Block layout for head dimension 'd':
+//   [outlier_count: uint8][outlier_indices: int16[max_outliers]]
+//   [outlier_values: ggml_fp16_t[max_outliers]]
+//   [packed_regular: uint8[ceil(d * (1-ratio) * bits / 8)]]
+// Assumptions: d is power-of-2 (64, 128, 256, 512); outlier_ratio = 0.08; bits = 3
+// ============================================================================
+
+#define TQ_HYBRID_MAX_OUTLIERS 64  // Support up to d=800 with 8% outliers
+#define TQ_HYBRID_BITS_REGULAR 3
+#define TQ_HYBRID_CENTROIDS (1 << TQ_HYBRID_BITS_REGULAR)  // 8 centroids
+
+typedef struct {
+    uint8_t n_outliers;                              // Actual number of outliers (≤ max)
+    int16_t outlier_idx[TQ_HYBRID_MAX_OUTLIERS];     // Original channel indices of outliers
+    ggml_fp16_t outlier_val[TQ_HYBRID_MAX_OUTLIERS]; // FP16 values of outliers
+    // Packed 3-bit indices for regular channels follow immediately after
+    // Access via: uint8_t* packed = (uint8_t*)(this + 1);
+} block_tq_hybrid;
+
 //
 // Super-block quantization structures
 //

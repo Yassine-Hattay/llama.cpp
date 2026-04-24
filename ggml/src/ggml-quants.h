@@ -35,6 +35,32 @@ GGML_API void quantize_row_q8_K_ref(const float * GGML_RESTRICT x, block_q8_K * 
 GGML_API void quantize_row_tq1_0_ref(const float * GGML_RESTRICT x, block_tq1_0 * GGML_RESTRICT y, int64_t k);
 GGML_API void quantize_row_tq2_0_ref(const float * GGML_RESTRICT x, block_tq2_0 * GGML_RESTRICT y, int64_t k);
 
+// TurboQuant-Hybrid quantization/dequantization
+GGML_API void quantize_row_tq_hybrid(
+    const float * GGML_RESTRICT x,
+    block_tq_hybrid * GGML_RESTRICT vy,
+    const int16_t * GGML_RESTRICT outlier_indices,
+    int n_outliers,
+    int d
+);
+GGML_API void dequantize_row_tq_hybrid(
+    const block_tq_hybrid * GGML_RESTRICT vx,
+    float * GGML_RESTRICT y,
+    int d
+);
+
+// Fast Walsh-Hadamard Transform for TurboQuant-Hybrid
+GGML_API void ggml_fwht_cpu(float * x, int d);
+
+// Attention score computation with rotated query trick
+GGML_API float ggml_compute_tq_hybrid_score(
+    const float * q_query,
+    const block_tq_hybrid * k_block,
+    const int16_t * outlier_indices,
+    int n_outliers,
+    int d
+);
+
 GGML_API void quantize_row_iq3_xxs_ref(const float * GGML_RESTRICT x, block_iq3_xxs * GGML_RESTRICT y, int64_t k);
 GGML_API void quantize_row_iq4_nl_ref (const float * GGML_RESTRICT x, block_iq4_nl  * GGML_RESTRICT y, int64_t k);
 GGML_API void quantize_row_iq4_xs_ref (const float * GGML_RESTRICT x, block_iq4_xs  * GGML_RESTRICT y, int64_t k);
