@@ -421,15 +421,16 @@ extern "C" {
         // GGML_TYPE_Q4_0_4_4 = 31, support has been removed from gguf files
         // GGML_TYPE_Q4_0_4_8 = 32,
         // GGML_TYPE_Q4_0_8_8 = 33,
-        GGML_TYPE_TQ1_0   = 34,
-        GGML_TYPE_TQ2_0   = 35,
+        GGML_TYPE_TQ1_0       = 34,
+        GGML_TYPE_TQ2_0       = 35,
         // GGML_TYPE_IQ4_NL_4_4 = 36,
         // GGML_TYPE_IQ4_NL_4_8 = 37,
         // GGML_TYPE_IQ4_NL_8_8 = 38,
-        GGML_TYPE_MXFP4   = 39, // MXFP4 (1 block)
-        GGML_TYPE_NVFP4   = 40, // NVFP4 (4 blocks, E4M3 scale)
-        GGML_TYPE_Q1_0    = 41,
-        GGML_TYPE_COUNT   = 42,
+        GGML_TYPE_MXFP4       = 39, // MXFP4 (1 block)
+        GGML_TYPE_NVFP4       = 40, // NVFP4 (4 blocks, E4M3 scale)
+        GGML_TYPE_Q1_0        = 41,
+        GGML_TYPE_TQ_HYBRID   = 42, // TurboQuant-Hybrid: 3-bit regular + FP16 outliers
+        GGML_TYPE_COUNT       = 43,
     };
 
     // precision
@@ -576,6 +577,10 @@ extern "C" {
         GGML_OP_OPT_STEP_SGD,
 
         GGML_OP_GLU,
+
+        // TurboQuant-Hybrid operations
+        GGML_OP_TQ_QUANT_FWD,   // Quantize FP32 tensor → TQ_HYBRID format
+        GGML_OP_TQ_DEQUANT_MAT, // Dequantize TQ_HYBRID + matmul with rotated query
 
         GGML_OP_COUNT,
     };
