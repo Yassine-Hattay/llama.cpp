@@ -1,0 +1,111 @@
+{
+  "all_results": [
+    {
+      "dense": {
+        "correlation": 0.9792462587356567,
+        "d_prod": 0.00034690677421167493,
+        "orthogonality_error": 4.76837158203125e-07,
+        "relative_rmse": 0.2026825459186901,
+        "variance_ratio": 1.2965458631515503
+      },
+      "hadamard": {
+        "correlation": 0.9841264486312866,
+        "d_prod": 0.00026620179414749146,
+        "orthogonality_error": 1.8605256002501847e-07,
+        "relative_rmse": 0.17754786310751355,
+        "variance_ratio": 1.1524107456207275
+      },
+      "improvement_pct": 23.264169530151367,
+      "seed": 42
+    },
+    {
+      "dense": {
+        "correlation": 0.9804931282997131,
+        "d_prod": 0.0003339327231515199,
+        "orthogonality_error": 5.960464477539062e-07,
+        "relative_rmse": 0.19667832190737458,
+        "variance_ratio": 1.380302906036377
+      },
+      "hadamard": {
+        "correlation": 0.9837617874145508,
+        "d_prod": 0.00027820959803648293,
+        "orthogonality_error": 1.8605256002501847e-07,
+        "relative_rmse": 0.17952009070623937,
+        "variance_ratio": 1.1865906715393066
+      },
+      "improvement_pct": 16.68693160381079,
+      "seed": 123
+    },
+    {
+      "dense": {
+        "correlation": 0.980539083480835,
+        "d_prod": 0.0003302833065390587,
+        "orthogonality_error": 5.960464477539062e-07,
+        "relative_rmse": 0.19644119220861755,
+        "variance_ratio": 1.311728835105896
+      },
+      "hadamard": {
+        "correlation": 0.9845179319381714,
+        "d_prod": 0.0002632268297020346,
+        "orthogonality_error": 1.8605256002501847e-07,
+        "relative_rmse": 0.17536960586354822,
+        "variance_ratio": 1.1397454738616943
+      },
+      "improvement_pct": 20.302714520963573,
+      "seed": 777
+    },
+    {
+      "dense": {
+        "correlation": 0.9810421466827393,
+        "d_prod": 0.0003315194044262171,
+        "orthogonality_error": 4.76837158203125e-07,
+        "relative_rmse": 0.19380356156835749,
+        "variance_ratio": 1.265679121017456
+      },
+      "hadamard": {
+        "correlation": 0.9846885800361633,
+        "d_prod": 0.00026821979554370046,
+        "orthogonality_error": 1.8605256002501847e-07,
+        "relative_rmse": 0.17432219699240017,
+        "variance_ratio": 1.1386797428131104
+      },
+      "improvement_pct": 19.093786981209597,
+      "seed": 2024
+    }
+  ],
+  "isotropic_control": {
+    "data_seeds_tested": [
+      42,
+      123,
+      777,
+      2024
+    ],
+    "hadamard_seeds_tested": [
+      1337
+    ],
+    "improvements": [
+      24.46824933434372,
+      32.20709012159732,
+      22.992573952900297,
+      29.18163163465562
+    ],
+    "mean_improvement_pct": 27.21238626087424,
+    "n_trials": 4,
+    "std_improvement_pct": 3.6797451469007374
+  },
+  "multi_seed_results": {
+    "hadamard_seed_used": 1337,
+    "improvements": [
+      19.83690065903383
+    ],
+    "mean_improvement_pct": 19.83690065903383,
+    "seeds_tested": [
+      42,
+      123,
+      777,
+      2024
+    ],
+    "std_improvement_pct": 2.3684212809342724
+  },
+  "single_seed_results": null
+}

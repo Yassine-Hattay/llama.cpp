@@ -1,0 +1,105 @@
+{
+  "dense_random": {
+    "variance_stats": {
+      "mean_variance": 0.007811025250703096,
+      "std_variance": 0.00014364199887495488,
+      "min_variance": 0.007445568684488535,
+      "max_variance": 0.008116986602544785,
+      "variance_ratio": 1.0901768207550049,
+      "coefficient_of_variation": 0.01838964782655239
+    },
+    "water_filling": {
+      "nu": 0.007809709291905165,
+      "bit_range": [
+        2.9655566215515137,
+        3.0278377532958984
+      ],
+      "bit_std": 0.013306157663464546
+    },
+    "d_prod": {
+      "d_prod": 0.0043700700625777245,
+      "true_ip_variance": 0.007859784178435802,
+      "relative_rmse": 0.74565663978269,
+      "correlation": 0.8072207570075989,
+      "mean_squared_error": 0.0043700700625777245
+    }
+  },
+  "walsh_hadamard": {
+    "variance_stats": {
+      "mean_variance": 0.007811024319380522,
+      "std_variance": 0.0001503224775660783,
+      "min_variance": 0.007429695222526789,
+      "max_variance": 0.008215111680328846,
+      "variance_ratio": 1.105713129043579,
+      "coefficient_of_variation": 0.019244913011789322
+    },
+    "water_filling": {
+      "nu": 0.007809595670551062,
+      "bit_range": [
+        2.9640276432037354,
+        3.0365161895751953
+      ],
+      "bit_std": 0.01384606584906578
+    },
+    "d_prod": {
+      "d_prod": 0.0043700700625777245,
+      "true_ip_variance": 0.007859784178435802,
+      "relative_rmse": 0.74565663978269,
+      "correlation": 0.8072207570075989,
+      "mean_squared_error": 0.0043700700625777245
+    },
+    "improvement_over_baseline_pct": 0.0
+  },
+  "sequency_gsr": {
+    "variance_stats": {
+      "mean_variance": 0.007811025250703096,
+      "std_variance": 0.00016496697207912803,
+      "min_variance": 0.007381294388324022,
+      "max_variance": 0.008316611871123314,
+      "variance_ratio": 1.1267145872116089,
+      "coefficient_of_variation": 0.02111975848674774
+    },
+    "water_filling": {
+      "nu": 0.007809296250343323,
+      "bit_range": [
+        2.9593405723571777,
+        3.0454015731811523
+      ],
+      "bit_std": 0.015238270163536072
+    },
+    "d_prod": {
+      "d_prod": 0.0043700700625777245,
+      "true_ip_variance": 0.007859784178435802,
+      "relative_rmse": 0.74565663978269,
+      "correlation": 0.8072207570075989,
+      "mean_squared_error": 0.0043700700625777245
+    },
+    "improvement_over_baseline_pct": 0.0
+  },
+  "hybrid": {
+    "variance_stats": {
+      "mean_variance": 0.007811024319380522,
+      "std_variance": 0.0001503224775660783,
+      "min_variance": 0.007429695222526789,
+      "max_variance": 0.008215111680328846,
+      "variance_ratio": 1.105713129043579,
+      "coefficient_of_variation": 0.019244913011789322
+    },
+    "water_filling": {
+      "nu": 0.007809595670551062,
+      "bit_range": [
+        2.9640276432037354,
+        3.0365161895751953
+      ],
+      "bit_std": 0.01384606584906578
+    },
+    "d_prod": {
+      "d_prod": 0.0043700700625777245,
+      "true_ip_variance": 0.007859784178435802,
+      "relative_rmse": 0.74565663978269,
+      "correlation": 0.8072207570075989,
+      "mean_squared_error": 0.0043700700625777245
+    },
+    "improvement_over_baseline_pct": 0.0
+  }
+}

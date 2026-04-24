@@ -1,0 +1,21 @@
+{
+  "config": {
+    "dim": 128,
+    "bits": 3,
+    "n_samples": 1000
+  },
+  "codebook": {
+    "mse_centroid_shift": 5.051816767194517e-06,
+    "mse_change_pct": 12.633993531905954
+  },
+  "algorithm1_mse": {
+    "baseline_d_prod": 0.0004902101936750114,
+    "ipopt_d_prod": 0.000490244128741324,
+    "improvement_pct": -0.006922554192140894
+  },
+  "algorithm2_prod": {
+    "baseline_d_prod": 0.0018570111133158207,
+    "ipopt_d_prod": 0.0018569419626146555,
+    "improvement_pct": 0.003723763453505992
+  }
+}
